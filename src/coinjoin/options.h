@@ -20,10 +20,10 @@ static constexpr int MAX_COINJOIN_SESSIONS = 10;
 static constexpr int MAX_COINJOIN_ROUNDS = 16;
 static constexpr int MAX_COINJOIN_DENOMS_GOAL = 100000;
 static constexpr int MAX_COINJOIN_DENOMS_HARDCAP = 100000;
-static constexpr int MAX_COINJOIN_AMOUNT = MAX_MONEY / COIN;
+static constexpr int MAX_COINJOIN_AMOUNT = 21000000;
 static constexpr int DEFAULT_COINJOIN_SESSIONS = 4;
 static constexpr int DEFAULT_COINJOIN_ROUNDS = 4;
-static constexpr int DEFAULT_COINJOIN_AMOUNT = 1000;
+static constexpr int DEFAULT_COINJOIN_AMOUNT = 100000;
 static constexpr int DEFAULT_COINJOIN_DENOMS_GOAL = 50;
 static constexpr int DEFAULT_COINJOIN_DENOMS_HARDCAP = 300;
 
@@ -37,8 +37,8 @@ static constexpr bool DEFAULT_COINJOIN_MULTISESSION = false;
 // Knowing that each CTxOut is ~35b big, 400 outputs should take 400 x ~35b = ~17.5kb.
 // More than 500 outputs starts to make qt quite laggy.
 // Additionally to need all 500 outputs (assuming a max per denom of 50) you'd need to be trying to
-// create denominations for over 3000 dash!
-static const int COINJOIN_DENOM_OUTPUTS_THRESHOLD = 500;
+// create denominations for over 3000 pozoqo!
+static const int COINJOIN_DENOM_OUTPUTS_THRESHOLD = 5000;
 
 // Warn user if mixing in gui or try to create backup if mixing in daemon mode
 // when we have only this many keys left

@@ -18,8 +18,8 @@ from test_framework.util import assert_equal, assert_raises_rpc_error, force_fin
 
 class LLMQSigningTest(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(6, 5, fast_dip3_enforcement=True)
-        self.set_dash_llmq_test_params(5, 3)
+        self.set_pozoqo_test_params(6, 5, fast_dip3_enforcement=True)
+        self.set_pozoqo_llmq_test_params(5, 3)
 
     def add_options(self, parser):
         parser.add_argument("--spork21", dest="spork21", default=False, action="store_true",

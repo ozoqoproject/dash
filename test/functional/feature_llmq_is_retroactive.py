@@ -22,8 +22,8 @@ from test_framework.util import set_node_times
 class LLMQ_IS_RetroactiveSigning(DashTestFramework):
     def set_test_params(self):
         # -whitelist is needed to avoid the trickling logic on node0
-        self.set_dash_test_params(6, 5, [["-whitelist=127.0.0.1"], [], [], [], ["-minrelaytxfee=0.001"], ["-minrelaytxfee=0.001"]], fast_dip3_enforcement=True)
-        self.set_dash_llmq_test_params(5, 3)
+        self.set_pozoqo_test_params(6, 5, [["-whitelist=127.0.0.1"], [], [], [], ["-minrelaytxfee=0.001"], ["-minrelaytxfee=0.001"]], fast_dip3_enforcement=True)
+        self.set_pozoqo_llmq_test_params(5, 3)
 
     def run_test(self):
         self.activate_dip8()

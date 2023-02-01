@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  pozoqod The Pozoqo Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: pozoqod
+# processname: pozoqod
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/pozoqod, see below
+if [ -f /etc/sysconfig/pozoqod ]; then
+        . /etc/sysconfig/pozoqod
+fi
+
+RETVAL=0
+
+prog=pozoqod
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/pozoqod
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/pozoqod}
+
+# pozoqod defaults to /usr/bin/pozoqod, override with BITCOIND_BIN
+pozoqod=${BITCOIND_BIN-/usr/bin/pozoqod}
+
+# pozoqod opts default to -disablewallet, override with BITCOIND_OPTS
+pozoqod_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $pozoqod $pozoqod_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

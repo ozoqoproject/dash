@@ -9,7 +9,7 @@ export LC_ALL=C.UTF-8
 
 set -e
 
-source ./ci/dash/matrix.sh
+source ./ci/pozoqo/matrix.sh
 
 unset CC; unset CXX
 unset DISPLAY
@@ -51,7 +51,7 @@ cd build-ci
 ../configure --cache-file=config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && false)
 make distdir VERSION=$BUILD_TARGET
 
-cd dashcore-$BUILD_TARGET
+cd pozoqo-$BUILD_TARGET
 ./configure --cache-file=../config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && false)
 
 make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL V=1 ; false )

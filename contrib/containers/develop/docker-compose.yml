@@ -8,10 +8,10 @@ services:
     tty: true         # Equivalent to -t
     stdin_open: true  # Equivalent to -i
     ports:
-      - "9998:9998"           # Mainnet Ports
-      - "9999:9999"
-      - "19998:19998"         # Testnet Ports
-      - "19999:19999"
+      - "19191:19191"           # Mainnet Ports
+      - "18181:18181"
+      - "29292:29292"         # Testnet Ports
+      - "28282:28282"
 
 # A note about volumes:
 #
@@ -26,7 +26,7 @@ services:
       - type: bind
 #        source: /host/$PWD # Workaround needed on non-Linux hosts
         source: ../../..
-        target: /src/dash
+        target: /src/pozoqo
 
 # Sharing your ccache
 #
@@ -41,7 +41,7 @@ services:
 # NOTE: Only the first line is a continuation of the services.container.volumes
 #       definition
 
-#      - cache:/home/dash/.ccache
+#      - cache:/home/pozoqo/.ccache
 #
 # volumes:
 #    cache:

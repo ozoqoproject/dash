@@ -14,10 +14,10 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* DashGUI -- Size of icons in status bar */
+/* PozoqoGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 18;
 
-/* DashGUI -- Size of button icons e.g. in SendCoinEntry or SignVerifyMessageDialog */
+/* PozoqoGUI -- Size of button icons e.g. in SendCoinEntry or SignVerifyMessageDialog */
 static const int BUTTON_ICONSIZE = 23;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -37,12 +37,12 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 90
 
-#define QAPP_ORG_NAME "Dash"
-#define QAPP_ORG_DOMAIN "dash.org"
-#define QAPP_APP_NAME_DEFAULT "Dash-Qt"
-#define QAPP_APP_NAME_TESTNET "Dash-Qt-testnet"
-#define QAPP_APP_NAME_DEVNET "Dash-Qt-%s"
-#define QAPP_APP_NAME_REGTEST "Dash-Qt-regtest"
+#define QAPP_ORG_NAME "Pozoqo"
+#define QAPP_ORG_DOMAIN "pozoqo.tech"
+#define QAPP_APP_NAME_DEFAULT "Pozoqo-Qt"
+#define QAPP_APP_NAME_TESTNET "Pozoqo-Qt-testnet"
+#define QAPP_APP_NAME_DEVNET "Pozoqo-Qt-%s"
+#define QAPP_APP_NAME_REGTEST "Pozoqo-Qt-regtest"
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};

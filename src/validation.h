@@ -536,7 +536,7 @@ private:
     //! Manages the UTXO set, which is a reflection of the contents of `m_chain`.
     std::unique_ptr<CoinsViews> m_coins_views;
 
-    //! Dash
+    //! Pozoqo
     std::unique_ptr<llmq::CChainLocksHandler>& m_clhandler;
     std::unique_ptr<llmq::CInstantSendManager>& m_isman;
     std::unique_ptr<llmq::CQuorumBlockProcessor>& m_quorum_block_processor;

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_CRYPTO_BLS_H
-#define DASH_CRYPTO_BLS_H
+#ifndef POZOQO_CRYPTO_BLS_H
+#define POZOQO_CRYPTO_BLS_H
 
 #include <hash.h>
 #include <serialize.h>
@@ -11,7 +11,7 @@
 #include <util/strencodings.h>
 #include <util/ranges.h>
 
-// bls-dash uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
+// bls-pozoqo uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
 #undef ERROR
 #undef DEBUG
 #include <bls-dash/bls.hpp>
@@ -484,4 +484,4 @@ using BLSVerificationVectorPtr = std::shared_ptr<BLSVerificationVector>;
 
 bool BLSInit();
 
-#endif // DASH_CRYPTO_BLS_H
+#endif // POZOQO_CRYPTO_BLS_H

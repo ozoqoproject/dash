@@ -1284,7 +1284,7 @@ void RPCConsole::setButtonIcons()
 void RPCConsole::reloadThemedWidgets()
 {
     clear();
-    ui->promptLabel->setHidden(GUIUtil::dashThemeActive());
+    ui->promptLabel->setHidden(GUIUtil::pozoqoThemeActive());
     // Adjust button icon colors on theme changes
     setButtonIcons();
 }

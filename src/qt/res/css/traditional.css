@@ -5,7 +5,7 @@ file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 ---------------------------------------------------------------------
 
-This file contains all changes for the dash theme "Traditional".
+This file contains all changes for the pozoqo theme "Traditional".
 
 NOTE: This file gets not appended to the general.css. The Traditional
 theme is a standalone theme which just fixes some bugs in the OS default
@@ -23,10 +23,10 @@ Loaded in GUIUtil::loadStyleSheet() in guitil.cpp.
 #222222
 #333
 #fff
-#008de4
-#047ac2
+#5e8c41
+#5e8c41
 #a84832
-#ccfafafa
+#96ed5e
 
 </colors>
 */
@@ -37,7 +37,7 @@ QToolBar / QToolButton
 
 QToolBar QLabel#lblToolbarLogo {
     padding: 12px;
-    image: url(':/images/dash_logo_toolbar_blue');
+    image: url(':/images/pozoqo_logo_toolbar_blue');
     height: 2.5em;
 }
 
@@ -66,7 +66,7 @@ QPushButton - Special case, tabbar replacement buttons
     border-bottom: 3px solid red;
     padding-bottom: 5px;
     background-color: #00000000;
-    border-color: #008de4;
+    border-color: #5e8c41;
 }
 
 /* Debug window buttons */
@@ -112,7 +112,7 @@ QPushButton - Special case, tabbar replacement buttons
     border-radius: 0px;
     border-bottom: 3px solid red;
     background-color: #00000000;
-    border-color: #047ac2;
+    border-color: #5e8c41;
 }
 
 /* Debug window buttons */
@@ -145,7 +145,7 @@ ModalOverlay
 QWidget#bgWidget { /* The frame overlaying the overview-page */
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #ccfafafa;
+    background-color: #96ed5e;
 }
 
 QWidget#contentWidget { /* The actual content with the text/buttons/etc... */

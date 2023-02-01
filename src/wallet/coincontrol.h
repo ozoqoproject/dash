@@ -93,7 +93,7 @@ public:
         vOutpoints.assign(setSelected.begin(), setSelected.end());
     }
 
-    // Dash-specific helpers
+    // Pozoqo-specific helpers
 
     void UseCoinJoin(bool fUseCoinJoin)
     {

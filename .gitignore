@@ -6,17 +6,17 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/dash
-src/dashd
-src/dash-cli
-src/dash-tx
-src/dash-wallet
+src/pozoqo
+src/pozoqod
+src/pozoqo-cli
+src/pozoqo-tx
+src/pozoqo-wallet
 src/test/fuzz
 !src/test/fuzz/*.*
-src/test/test_dash
-src/qt/test/test_dash-qt
+src/test/test_pozoqo
+src/qt/test/test_pozoqo-qt
 src/qt/res/css/colors/*
-src/bench/bench_dash
+src/bench/bench_pozoqo
 
 # autoreconf
 Makefile.in
@@ -93,8 +93,8 @@ libconftest.dylib*
 *.qm
 Makefile
 !depends/Makefile
-dash-qt
-Dash-Qt.app
+pozoqo-qt
+Pozoqo-Qt.app
 background.tiff*
 !/depends/Makefile
 
@@ -103,7 +103,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-dash-qt_test
+pozoqo-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -117,7 +117,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_dash.coverage/
+test_pozoqo.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -135,15 +135,15 @@ test/cache/*
 .autotools
 /doc/doxygen/
 
-libdashconsensus.pc
+libpozoqoconsensus.pc
 contrib/devtools/split-debug.sh
-src/qt/dash-qt.bash
+src/qt/pozoqo-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-dash-cli
-dashd
-dash-qt
+pozoqo-cli
+pozoqod
+pozoqo-qt
 make
 
 /docker/bin

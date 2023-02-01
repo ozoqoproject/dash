@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Pozoqo Core
+Comment=Pozoqo P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Pozoqo peer-to-peer Netzwerk
+Comment[fr]=Pozoqo, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Pozoqo, eşten eşe kriptografik sanal para birimi
+Exec=pozoqo-qt %u
+Terminal=false
+Type=Application
+Icon=pozoqo128
+MimeType=x-scheme-handler/pozoqo;
+Categories=Office;Finance;P2P;Network;Qt;
+StartupWMClass=Pozoqo-qt

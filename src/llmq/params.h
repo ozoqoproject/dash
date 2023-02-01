@@ -38,7 +38,7 @@ enum class LLMQType : uint8_t {
 };
 
 // Configures a LLMQ and its DKG
-// See https://github.com/dashpay/dips/blob/master/dip-0006.md for more details
+// See https://github.com/pozoqopay/dips/blob/master/dip-0006.md for more details
 struct LLMQParams {
     LLMQType type;
 
@@ -159,7 +159,7 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
     },
 
     /**
-     * llmq_test (Dash Core 0.17) aka llmq_test_v17
+     * llmq_test (Pozoqo Core 0.17) aka llmq_test_v17
      * This quorum is only used for testing
      *
      */
@@ -268,19 +268,19 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
         .type = LLMQType::LLMQ_50_60,
         .name = "llmq_50_60",
         .useRotation = false,
-        .size = 50,
-        .minSize = 40,
-        .threshold = 30,
+        .size = 3,
+        .minSize = 2,
+        .threshold = 2,
 
         .dkgInterval = 24, // one DKG per hour
         .dkgPhaseBlocks = 2,
         .dkgMiningWindowStart = 10, // dkgPhaseBlocks * 5 = after finalization
-        .dkgMiningWindowEnd = 18,
-        .dkgBadVotesThreshold = 40,
+        .dkgMiningWindowEnd = 3,
+        .dkgBadVotesThreshold = 3,
 
-        .signingActiveQuorumCount = 24, // a full day worth of LLMQs
-        .keepOldConnections = 25,
-        .recoveryMembers = 25,
+        .signingActiveQuorumCount = 2, // a full day worth of LLMQs
+        .keepOldConnections = 2,
+        .recoveryMembers = 2,
     },
 
     /**
@@ -293,19 +293,19 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
         .type = LLMQType::LLMQ_60_75,
         .name = "llmq_60_75",
         .useRotation = true,
-        .size = 60,
-        .minSize = 50,
-        .threshold = 45,
+        .size = 3,
+        .minSize = 2,
+        .threshold = 2,
 
-        .dkgInterval = 24 * 12, // DKG cycle every 12 hours
+        .dkgInterval = 24, // DKG cycle every 12 hours
         .dkgPhaseBlocks = 2,
-        .dkgMiningWindowStart = 42, // signingActiveQuorumCount + dkgPhaseBlocks * 5 = after finalization
-        .dkgMiningWindowEnd = 50,
-        .dkgBadVotesThreshold = 48,
+        .dkgMiningWindowStart = 10, // signingActiveQuorumCount + dkgPhaseBlocks * 5 = after finalization
+        .dkgMiningWindowEnd = 2,
+        .dkgBadVotesThreshold = 4,
 
-        .signingActiveQuorumCount = 32,
-        .keepOldConnections = 64,
-        .recoveryMembers = 25,
+        .signingActiveQuorumCount = 3,
+        .keepOldConnections = 3,
+        .recoveryMembers = 3,
     },
 
     /**
@@ -318,20 +318,20 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
         .type = LLMQType::LLMQ_400_60,
         .name = "llmq_400_60",
         .useRotation = false,
-        .size = 400,
-        .minSize = 300,
-        .threshold = 240,
+        .size = 3,
+        .minSize = 2,
+        .threshold = 2,
 
-        .dkgInterval = 24 * 12, // one DKG every 12 hours
+        .dkgInterval = 24, // one DKG every 12 hours
         .dkgPhaseBlocks = 4,
-        .dkgMiningWindowStart = 20, // dkgPhaseBlocks * 5 = after finalization
-        .dkgMiningWindowEnd = 28,
-        .dkgBadVotesThreshold = 300,
+        .dkgMiningWindowStart = 10, // dkgPhaseBlocks * 5 = after finalization
+        .dkgMiningWindowEnd = 3,
+        .dkgBadVotesThreshold = 3,
 
         .signingActiveQuorumCount = 4, // two days worth of LLMQs
 
-        .keepOldConnections = 5,
-        .recoveryMembers = 100,
+        .keepOldConnections = 3,
+        .recoveryMembers = 3,
     },
 
     /**
@@ -345,11 +345,11 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
         .type = LLMQType::LLMQ_400_85,
         .name = "llmq_400_85",
         .useRotation = false,
-        .size = 400,
-        .minSize = 350,
-        .threshold = 340,
+        .size = 4,
+        .minSize = 3,
+        .threshold = 3,
 
-        .dkgInterval = 24 * 24, // one DKG every 24 hours
+        .dkgInterval = 24, // one DKG every 24 hours
         .dkgPhaseBlocks = 4,
         .dkgMiningWindowStart = 20, // dkgPhaseBlocks * 5 = after finalization
         .dkgMiningWindowEnd = 48,   // give it a larger mining window to make sure it is mined
@@ -358,7 +358,7 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
         .signingActiveQuorumCount = 4, // four days worth of LLMQs
 
         .keepOldConnections = 5,
-        .recoveryMembers = 100,
+        .recoveryMembers = 5,
     },
 
     /**
@@ -366,26 +366,26 @@ static constexpr std::array<LLMQParams, 11> available_llmqs = {
      * This quorum is deployed on mainnet and requires
      * 80 - 100 participants
      *
-     * Used by Dash Platform
+     * Used by Pozoqo Platform
      */
     LLMQParams{
         .type = LLMQType::LLMQ_100_67,
         .name = "llmq_100_67",
         .useRotation = false,
-        .size = 100,
-        .minSize = 80,
-        .threshold = 67,
+        .size = 5,
+        .minSize = 4,
+        .threshold = 4,
 
         .dkgInterval = 24, // one DKG per hour
         .dkgPhaseBlocks = 2,
         .dkgMiningWindowStart = 10, // dkgPhaseBlocks * 5 = after finalization
         .dkgMiningWindowEnd = 18,
-        .dkgBadVotesThreshold = 80,
+        .dkgBadVotesThreshold = 8,
 
         .signingActiveQuorumCount = 24, // a full day worth of LLMQs
 
-        .keepOldConnections = 25,
-        .recoveryMembers = 50,
+        .keepOldConnections = 5,
+        .recoveryMembers = 5,
     },
 
 }; // available_llmqs

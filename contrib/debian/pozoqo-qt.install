@@ -1,0 +1,6 @@
+usr/local/bin/pozoqo-qt usr/bin
+share/pixmaps/pozoqo32.xpm usr/share/pixmaps
+share/pixmaps/pozoqo16.xpm usr/share/pixmaps
+share/pixmaps/pozoqo128.png usr/share/pixmaps
+debian/pozoqo-qt.desktop usr/share/applications
+debian/pozoqo-qt.protocol usr/share/kde4/services/

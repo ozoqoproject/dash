@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/pozoqo_ar.qm</file>
+        <file alias="bg">locale/pozoqo_bg.qm</file>
+        <file alias="de">locale/pozoqo_de.qm</file>
+        <file alias="en">locale/pozoqo_en.qm</file>
+        <file alias="es">locale/pozoqo_es.qm</file>
+        <file alias="fi">locale/pozoqo_fi.qm</file>
+        <file alias="fr">locale/pozoqo_fr.qm</file>
+        <file alias="it">locale/pozoqo_it.qm</file>
+        <file alias="ja">locale/pozoqo_ja.qm</file>
+        <file alias="ko">locale/pozoqo_ko.qm</file>
+        <file alias="nl">locale/pozoqo_nl.qm</file>
+        <file alias="pl">locale/pozoqo_pl.qm</file>
+        <file alias="pt">locale/pozoqo_pt.qm</file>
+        <file alias="ro">locale/pozoqo_ro.qm</file>
+        <file alias="ru">locale/pozoqo_ru.qm</file>
+        <file alias="sk">locale/pozoqo_sk.qm</file>
+        <file alias="th">locale/pozoqo_th.qm</file>
+        <file alias="tr">locale/pozoqo_tr.qm</file>
+        <file alias="vi">locale/pozoqo_vi.qm</file>
+        <file alias="zh_CN">locale/pozoqo_zh_CN.qm</file>
+        <file alias="zh_TW">locale/pozoqo_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -48,7 +48,7 @@ def assert_net_servicesnames(servicesflag, servicenames):
 
 class NetTest(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(3, 1, fast_dip3_enforcement=True)
+        self.set_pozoqo_test_params(3, 1, fast_dip3_enforcement=True)
         self.supports_cli = False
 
     def run_test(self):

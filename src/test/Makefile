@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. dash_test
+	$(MAKE) -C .. pozoqo_test
 clean:
-	$(MAKE) -C .. dash_test_clean
+	$(MAKE) -C .. pozoqo_test_clean
 check:
-	$(MAKE) -C .. dash_test_check
+	$(MAKE) -C .. pozoqo_test_check

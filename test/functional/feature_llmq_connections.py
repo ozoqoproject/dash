@@ -21,8 +21,8 @@ MAX_AGE = 120 * Options.timeout_scale
 
 class LLMQConnections(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(15, 14, fast_dip3_enforcement=True)
-        self.set_dash_llmq_test_params(5, 3)
+        self.set_pozoqo_test_params(15, 14, fast_dip3_enforcement=True)
+        self.set_pozoqo_llmq_test_params(5, 3)
 
     def run_test(self):
         self.nodes[0].sporkupdate("SPORK_17_QUORUM_DKG_ENABLED", 0)

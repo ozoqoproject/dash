@@ -291,9 +291,9 @@ unsigned int MurmurHash3(unsigned int nHashSeed, Span<const unsigned char> vData
 
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
 
-/* ----------- Dash Hash ------------------------------------------------ */
+/* ----------- Pozoqo Hash ------------------------------------------------ */
 template<typename T1>
-inline uint256 HashX11(const T1 pbegin, const T1 pend)
+inline uint256 HashX9(const T1 pbegin, const T1 pend)
 
 {
     sph_blake512_context     ctx_blake;
@@ -305,11 +305,9 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_luffa512_context     ctx_luffa;
     sph_cubehash512_context  ctx_cubehash;
     sph_shavite512_context   ctx_shavite;
-    sph_simd512_context      ctx_simd;
-    sph_echo512_context      ctx_echo;
     static unsigned char pblank[1];
 
-    uint512 hash[11];
+    uint512 hash[9];
 
     sph_blake512_init(&ctx_blake);
     sph_blake512 (&ctx_blake, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));
@@ -347,15 +345,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_shavite512(&ctx_shavite, static_cast<const void*>(&hash[7]), 64);
     sph_shavite512_close(&ctx_shavite, static_cast<void*>(&hash[8]));
 
-    sph_simd512_init(&ctx_simd);
-    sph_simd512 (&ctx_simd, static_cast<const void*>(&hash[8]), 64);
-    sph_simd512_close(&ctx_simd, static_cast<void*>(&hash[9]));
-
-    sph_echo512_init(&ctx_echo);
-    sph_echo512 (&ctx_echo, static_cast<const void*>(&hash[9]), 64);
-    sph_echo512_close(&ctx_echo, static_cast<void*>(&hash[10]));
-
-    return hash[10].trim256();
+    return hash[8].trim256();
 }
 
 #endif // BITCOIN_HASH_H
